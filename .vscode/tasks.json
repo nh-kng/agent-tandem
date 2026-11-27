@@ -1,4 +1,21 @@
 {
   "version": "2.0.0",
-  "tasks": [{ "type": "npm", "script": "build", "problemMatcher": [], "group": "build" }]
+  "tasks": [
+    {
+      "label": "Build",
+      "icon": { "id": "tools", "color": "terminal.ansiBlue" },
+      "type": "npm",
+      "script": "build",
+      "problemMatcher": [],
+      "group": { "kind": "build", "isDefault": true }
+    },
+    {
+      "label": "Package and Install Local VSIX",
+      "icon": { "id": "package", "color": "terminal.ansiGreen" },
+      "detail": "Build, package, install and verify the local extension, and enable its required API proposals in VS Code.",
+      "type": "npm",
+      "script": "dev",
+      "problemMatcher": []
+    }
+  ]
 }
